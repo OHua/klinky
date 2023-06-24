@@ -9,6 +9,7 @@ class MyClient(discord.Client):
 
     async def on_message(self, message):
         print(f'Message from {message.author}: {message.content}')
+        await message.channel.send(f'Message from {message.author}: {message.content}')
 
 
 if __name__ == "__main__":
